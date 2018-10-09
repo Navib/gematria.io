@@ -7,7 +7,6 @@ import { Router, Route, Switch, Link } from 'react-router-dom';
 import promise from 'redux-promise';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { store, history } from './store';
-import { ConnectedRouter } from 'react-router-redux';
 import muiTheme from './theme/index';
 
 import './styles/main.scss';
