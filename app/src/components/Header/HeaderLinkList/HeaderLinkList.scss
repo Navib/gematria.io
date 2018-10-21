@@ -1,0 +1,24 @@
+@import '../../../styles/_variables.scss';
+
+/*
+  HeaderLink Styles
+*/
+
+.headerLinksList {
+  color: $primaryColor;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.headerListItem {
+  margin-right: 1rem;
+}
+
+.headerLinksAuthBar {
+  color: $primaryColor;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2.5rem;
+}

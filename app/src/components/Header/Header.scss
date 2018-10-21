@@ -1,3 +1,6 @@
+@import '../../styles/_variables.scss';
+
 .headerContainer {
-  background: green;
+  box-shadow: $boxShadow;
+  border-bottom: 1 solid $primaryColorLight;
 }
