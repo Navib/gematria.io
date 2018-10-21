@@ -5,34 +5,28 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, Switch, Link } from 'react-router-dom';
 import promise from 'redux-promise';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { store, history } from './store';
-import muiTheme from './theme/index';
 
 import './styles/main.scss';
+import './styles/grid/foundation.min.css';
 
 import App from './components/App';
-
-const Home = () => {
-  return <div>Home</div>;
-};
+import Home from './components/Pages/Home/index';
 
 const Calculator = () => {
   return <div>Calculator</div>;
 };
 
 ReactDOM.render(
-  <MuiThemeProvider muiTheme={muiTheme}>
-    <Provider store={store}>
-      <Router history={history}>
-        <Switch>
-          <App>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/calculator" component={Calculator} />
-          </App>
-        </Switch>
-      </Router>
-    </Provider>
-  </MuiThemeProvider>,
+  <Provider store={store}>
+    <Router history={history}>
+      <Switch>
+        <App>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/calculator" component={Calculator} />
+        </App>
+      </Switch>
+    </Router>
+  </Provider>,
   document.getElementById('app')
 );

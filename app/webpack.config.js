@@ -47,6 +47,14 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' }
+        ]
+      },
       // sass
       {
         test: /\.scss$/,
@@ -55,8 +63,10 @@ module.exports = {
           use: [
             {
               loader: 'css-loader',
-              options: {
-                sourceMap: true
+              query: {
+                sourceMap: true,
+                modules: true,
+                localIdentName: '[name]__[local]___[hash:base64:5]'
               }
             },
             {
