@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 const Cell = ({ children, className }) => {
-  return <div className={className}>{children}</div>;
+  return <div className={`cell ${className}`}>{children}</div>;
 };
 
 Cell.propTypes = propTypes;

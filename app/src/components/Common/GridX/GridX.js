@@ -2,17 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const defaultProps = {
-  className: '',
-  gutters: false
+  className: ''
 };
 
 const propTypes = {
   className: PropTypes.string,
-  gutters: PropTypes.bool,
   children: PropTypes.any
 };
 
-const GridX = ({ children, gutters, className }) => {
+const GridX = ({ children, className }) => {
   return <div className={`grid-x ${className}`}>{children}</div>;
 };
 

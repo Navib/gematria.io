@@ -8,6 +8,7 @@ import promise from 'redux-promise';
 import { store, history } from './store';
 
 import './styles/main.scss';
+import './styles/grid/foundation.min.css';
 
 import App from './components/App';
 import Home from './components/Pages/Home/index';
