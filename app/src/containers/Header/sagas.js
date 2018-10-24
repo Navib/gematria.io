@@ -5,7 +5,6 @@ import { api } from './';
 export function* getNavigation(data) {
   try {
     const response = yield call(api.getNavigation, data);
-    console.log(response);
     yield put({ type: GOT_NAVIGATION, response });
   } catch (error) {
     console.log('getNavigation error', error.response.data.error);

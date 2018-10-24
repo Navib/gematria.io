@@ -1,5 +1,6 @@
 import axios from 'axios';
+import apiEndPoints from '../../../../routes/apiEndPoints';
 
 export const getNavigation = () => {
-  return axios.get('https://api.myjson.com/bins/9ixjs');
+  return axios.get(apiEndPoints.fetchHeader);
 };

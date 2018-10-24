@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Cell from '../../Common/Cell';
-import AnchorTag from '../../Common/AnchorTag';
 import PrimaryLink from '../../Common/PrimaryLink';
 import styles from './HeaderLinkList.scss';
 
@@ -23,9 +22,9 @@ const renderLinks = (linkObj, styles, className) => {
         key={`headerLink-${indx}`}
         className={classnames(styles.headerListItem, className)}
       >
-        <AnchorTag role="link" href={link.href}>
+        <PrimaryLink role="link" to={link.link}>
           {link.name}
-        </AnchorTag>
+        </PrimaryLink>
       </li>
     );
   });

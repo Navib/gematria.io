@@ -13,14 +13,16 @@ const defaultProps = {
 
 const propTypes = {
   title: PropTypes.any,
-  logo: PropTypes.any
+  logo: PropTypes.any,
+  links: PropTypes.array
 };
 
 class Header extends Component {
   componentDidMount() {
-    this.props.getNavigation();
+    const { links } = this.props;
+    if (!links) this.props.getNavigation();
   }
-  componentDidUpdate() {}
+
   render() {
     if (!this.props.links) return <div />;
     return (
