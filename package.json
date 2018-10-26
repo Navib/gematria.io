@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon index.js",
+    "server": "node index.js",
     "client": "npm run start --prefix app",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm run build --prefix app",
