@@ -6,6 +6,7 @@ import styles from './CalculatorBox.scss';
 import Conversion from '../Conversion';
 import {
   englishOrdinal,
+  reverseOrdinal,
   fullReduction,
   reverseFullReduction
 } from '../../../utilities/ciphers';
@@ -22,23 +23,21 @@ const propTypes = {
 class CalculatorBox extends Component {
   constructor(props) {
     super(props);
-
     this.selectConversion = this.selectConversion.bind(this);
   }
 
-  selectConversion(conversionId, currentSearch) {
-    if (currentSearch === undefined || currentSearch === '') return false;
-    const findConversion = this.props.activeCiphers.find(
-      obj => obj.id === conversionId
-    );
-    console.log(findConversion.id);
-    switch (findConversion.id) {
+  selectConversion(conversionId, currentSearch, alphabet) {
+    if (currentSearch === undefined || currentSearch === '') return 0;
+
+    switch (conversionId) {
       case 'EO':
-        return englishOrdinal(currentSearch, LETTERS);
+        return englishOrdinal(currentSearch, alphabet);
       case 'EFR':
-        return fullReduction(currentSearch, LETTERS);
+        return fullReduction(currentSearch, alphabet);
       case 'RFR':
-        return reverseFullReduction(currentSearch, LETTERS);
+        return reverseFullReduction(currentSearch, alphabet);
+      case 'RO':
+        return reverseOrdinal(currentSearch, alphabet);
       default:
         return 'test';
     }
@@ -51,12 +50,13 @@ class CalculatorBox extends Component {
         <Conversion
           key={cipher.id}
           currentSearch={currentSearch}
-          conversion={this.selectConversion(cipher.id, currentSearch)}
+          conversion={this.selectConversion(cipher.id, currentSearch, LETTERS)}
           title={cipher.name}
         />
       );
     });
   }
+
   render() {
     return (
       <GridX className={classnames(styles.calculatorBox)}>

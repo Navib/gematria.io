@@ -37,7 +37,7 @@ class Calculator extends Component {
 
     if (checked) {
       this.setState({
-        activeCiphers: [addRule, ...activeCiphers]
+        activeCiphers: [...activeCiphers, addRule]
       });
     } else {
       this.setState({

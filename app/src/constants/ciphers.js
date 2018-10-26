@@ -1,13 +1,18 @@
 const CIPHERS = [
   {
+    name: 'English Ordinal',
+    id: 'EO',
+    call: 'englishOrdinal'
+  },
+  {
     name: 'Full Reduction',
     id: 'EFR',
     call: 'fullReduction'
   },
   {
-    name: 'Single Reduction',
-    id: 'ESR',
-    call: 'singleReduction'
+    name: 'Reverse Ordinal',
+    id: 'RO',
+    call: 'reverseOrdinal'
   },
   {
     name: 'Reverse Full Reduction',
@@ -15,14 +20,9 @@ const CIPHERS = [
     call: 'reverseFullReduction'
   },
   {
-    name: 'English Ordinal',
-    id: 'EO',
-    call: 'englishOrdinal'
-  },
-  {
-    name: 'Reverse Ordinal',
-    id: 'RO',
-    call: 'reverseOrdinal'
+    name: 'Single Reduction',
+    id: 'ESR',
+    call: 'singleReduction'
   }
 ];
 
