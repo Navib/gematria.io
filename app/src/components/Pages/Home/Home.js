@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Calculator from '../../Calculator';
+import Calculator from '../../../containers/Calculator';
 
 const Home = ({ children }) => {
   return (

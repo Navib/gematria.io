@@ -1,0 +1,21 @@
+@import '../../../styles/_variables.scss';
+
+.conversionWrapper {
+  box-shadow: $boxShadow;
+  margin-top: $marginSpacing;
+  margin-bottom: $marginSpacing;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 1rem 0;
+}
+
+.conversionInt {
+  font-size: 20px;
+}
+
+.conversionTitle {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
