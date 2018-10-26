@@ -49,7 +49,6 @@ class CalculatorBox extends Component {
       return (
         <Conversion
           key={cipher.id}
-          currentSearch={currentSearch}
           conversion={this.selectConversion(cipher.id, currentSearch, LETTERS)}
           title={cipher.name}
         />
