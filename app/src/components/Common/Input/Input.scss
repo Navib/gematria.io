@@ -1,0 +1,22 @@
+@import '../../../styles/_variables.scss';
+
+.inputFieldText {
+  box-shadow: $boxShadow;
+  border: 1px solid $primaryColorLight;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  text-indent: 1.5rem;
+}
+
+.inputFieldText:focus {
+  outline: none;
+  box-shadow: $boxShadowDarker;
+}
+
+.inputFieldRow {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
