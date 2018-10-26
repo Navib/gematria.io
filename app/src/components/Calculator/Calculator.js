@@ -6,6 +6,7 @@ import Cell from '../Common/Cell';
 import CalculatorInput from '../../containers/Calculator/CalculatorInput';
 import CalculatorBox from './CalculatorBox';
 import CalculatorFilter from './CalculatorFilter';
+import Term from './Term';
 
 import CIPHERS from '../../constants/ciphers';
 
@@ -53,6 +54,7 @@ class Calculator extends Component {
           <Cell className="large-12 medium-12 small-12">
             <CalculatorFilter ciphers={CIPHERS} onChange={this.selectFilters} />
             <CalculatorInput />
+            <Term term={this.props.currentSearch} />
             <CalculatorBox
               currentSearch={this.props.currentSearch}
               activeCiphers={this.state.activeCiphers}

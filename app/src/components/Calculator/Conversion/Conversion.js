@@ -11,7 +11,7 @@ const propTypes = {
   conversion: PropTypes.any
 };
 
-const Conversion = ({ title, currentSearch, conversion }) => {
+const Conversion = ({ title, conversion }) => {
   return (
     <Cell
       className={classnames(
@@ -21,7 +21,6 @@ const Conversion = ({ title, currentSearch, conversion }) => {
     >
       <div className={classnames(styles.conversionCard)}>
         <h3 className={classnames(styles.conversionTitle)}>{title}</h3>
-        <div className={classnames(styles.conversionInt)}>{currentSearch}</div>
         <p className={classnames(styles.conversionInt)}>{conversion}</p>
       </div>
     </Cell>
