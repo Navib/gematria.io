@@ -1,0 +1,22 @@
+// BoxShadows
+$boxShadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+  0 1px 3px 1px rgba(60, 64, 67, 0.149);
+$boxShadowDarker: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+  0 1px 3px 1px rgba(60, 64, 67, 0.349);
+
+// Borders
+$borderRadius: 4px;
+
+// Colors
+$primaryColor: #000;
+$secondaryColor: #fff;
+$primaryColorLight: #e4e4e4;
+$fontColor: #000;
+
+// Transitions
+
+$fastTransition: all 0.2s ease-in-out;
+
+// Margins
+
+$marginSpacing: 2rem;

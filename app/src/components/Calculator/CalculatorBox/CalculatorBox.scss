@@ -1,0 +1,7 @@
+@import '../../../styles/_variables.scss';
+
+.calculatorBox {
+  box-shadow: $boxShadow;
+  margin-top: $marginSpacing;
+  margin-bottom: $marginSpacing;
+}

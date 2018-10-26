@@ -1,0 +1,31 @@
+@import '../../../styles/_variables.scss';
+
+.conversionWrapper {
+  margin-top: $marginSpacing;
+  margin-bottom: $marginSpacing;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 1rem 0;
+}
+
+.conversionInt {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.conversionTitle {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.conversionCard {
+  box-shadow: $boxShadow;
+  width: 80%;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}

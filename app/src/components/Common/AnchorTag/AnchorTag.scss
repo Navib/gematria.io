@@ -1,0 +1,40 @@
+@import '../../../styles/_variables.scss';
+
+/*
+  AnchorTagStyles
+*/
+
+:global(.btn-anchorTag) {
+  border: 2px solid $primaryColor;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  padding: 0.35rem;
+  margin: 0.25rem;
+  text-decoration: none;
+  color: $fontColor;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: $fastTransition;
+}
+
+:global(.btn-anchorTag:hover) {
+  border: 2px solid $secondaryColor;
+}
+
+:global(.btn-anchorTag:active) {
+  box-shadow: 0 4px #000;
+  transform: translateY(2px);
+}
+
+:global(.link-anchorTag) {
+  text-decoration: none;
+  color: $fontColor;
+  opacity: 1;
+  transition: $fastTransition;
+}
+
+:global(.link-anchorTag:hover) {
+  opacity: 0.6;
+}
