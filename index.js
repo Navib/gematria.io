@@ -13,7 +13,7 @@ app.use(
     keys: [keys.cookieKey]
   })
 );
-
+app.use(express.static('/public'));
 const PORT = process.env.PORT || 5001;
 
 app.listen(PORT);
