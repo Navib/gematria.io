@@ -7,10 +7,13 @@ import CalculatorInput from '../../containers/Calculator/CalculatorInput';
 import CalculatorBox from './CalculatorBox';
 import CalculatorFilter from './CalculatorFilter';
 import Term from './Term';
+import SlideOut from '../Common/SlideOut';
 
 import CIPHERS from '../../constants/ciphers';
 
-const defaultProps = {};
+const defaultProps = {
+  label: 'Gematria.io'
+};
 
 const propTypes = {
   currentSearch: PropTypes.string
@@ -52,7 +55,15 @@ class Calculator extends Component {
       <GridContainer>
         <GridX>
           <Cell className="large-12 medium-12 small-12">
-            <CalculatorFilter ciphers={CIPHERS} onChange={this.selectFilters} />
+            <h1 style={{ fontSize: '4rem' }}>{this.props.label}</h1>
+          </Cell>
+          <Cell className="large-12 medium-12 small-12">
+            <SlideOut>
+              <CalculatorFilter
+                ciphers={CIPHERS}
+                onChange={this.selectFilters}
+              />
+            </SlideOut>
             <CalculatorInput />
             <Term term={this.props.currentSearch} />
             <CalculatorBox

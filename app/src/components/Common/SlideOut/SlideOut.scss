@@ -1,0 +1,34 @@
+@import '../../../styles/_variables.scss';
+.slideOutWrapper {
+  background: #fff;
+  border-left: 2px solid black;
+  box-shadow: $boxShadow;
+  position: absolute;
+  left: 0;
+  top: 56px;
+  height: 100%;
+}
+
+.slideOutBody {
+}
+
+.tab {
+  background: black;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: -2.75rem;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  cursor: pointer;
+}
+
+.noScrollWrapper {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: -99;
+}

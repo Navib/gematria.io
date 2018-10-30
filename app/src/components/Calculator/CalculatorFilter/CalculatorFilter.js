@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Cell from '../../Common/Cell';
+import GridX from '../../Common/GridX';
 import Button from '../../Common/Button';
 import CheckBox from '../../Common/CheckBox';
 import styles from './CalculatorFilter.scss';
@@ -14,14 +15,15 @@ const propTypes = {
 };
 
 class CalculatorFilter extends Component {
-  componentDidMount() {
-    console.log(this.props);
-  }
+  componentDidMount() {}
 
   renderFilters() {
     return this.props.ciphers.map((cipher, i) => {
       return (
-        <Fragment key={cipher.id}>
+        <div
+          key={cipher.id}
+          className={classnames(styles.checkBoxSquare, 'medium-6 small-12')}
+        >
           <CheckBox
             name={cipher.id}
             type="checkbox"
@@ -29,7 +31,7 @@ class CalculatorFilter extends Component {
             defaultChecked={i > 3 ? false : true}
           />
           <span>{cipher.name}</span>
-        </Fragment>
+        </div>
       );
     });
   }
@@ -44,7 +46,7 @@ class CalculatorFilter extends Component {
         <form
           onChange={e => this.props.onChange(e.target.value, e.target.checked)}
         >
-          {this.renderFilters()}
+          <GridX>{this.renderFilters()}</GridX>
         </form>
       </Cell>
     );
