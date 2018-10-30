@@ -14,6 +14,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm run build --prefix app",
     "build-prod": "npm run build-prod --prefix app",
+    "heroku-postbuild": "npm run build",
     "test": "npm run test --prefix app"
   },
   "author": "",
