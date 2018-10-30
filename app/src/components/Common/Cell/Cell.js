@@ -6,12 +6,13 @@ const defaultProps = {};
 const propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
-  style: PropTypes.any
+  style: PropTypes.any,
+  onClick: PropTypes.func
 };
 
-const Cell = ({ children, className, style }) => {
+const Cell = ({ children, className, style, onClick }) => {
   return (
-    <div className={`cell ${className}`} style={style}>
+    <div className={`cell ${className}`} style={style} onClick={onClick}>
       {children}
     </div>
   );

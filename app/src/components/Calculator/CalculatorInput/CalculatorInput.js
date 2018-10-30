@@ -44,7 +44,6 @@ class CalculatorInput extends Component {
           }
           onSubmit={handleSubmit(this.onSubmit)}
         >
-          <label>Search</label>
           <Cell className={classnames(styles.noFieldBorder)}>
             <Field
               name="term"

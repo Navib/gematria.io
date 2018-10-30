@@ -46,6 +46,7 @@ class SlideOut extends Component {
         <Cell
           className={classnames(styles.noScrollWrapper)}
           style={{ width: this.state.width === '400px' ? '100%' : '0px' }}
+          onClick={() => this.onClick()}
         />
         <Cell
           className={classnames(styles.slideOutWrapper)}

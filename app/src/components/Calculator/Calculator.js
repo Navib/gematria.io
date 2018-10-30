@@ -55,7 +55,9 @@ class Calculator extends Component {
       <GridContainer>
         <GridX>
           <Cell className="large-12 medium-12 small-12">
-            <h1 style={{ fontSize: '4rem' }}>{this.props.label}</h1>
+            <h1 style={{ fontSize: '4rem', marginBottom: '2.2rem' }}>
+              {this.props.label}
+            </h1>
           </Cell>
           <Cell className="large-12 medium-12 small-12">
             <SlideOut>
