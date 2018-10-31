@@ -9,7 +9,8 @@ import {
   reverseOrdinal,
   fullReduction,
   reverseFullReduction,
-  singleReduction
+  singleReduction,
+  englishExtended
 } from '../../../utilities/ciphers';
 import LETTERS from '../../../constants/letters';
 
@@ -41,6 +42,8 @@ class CalculatorBox extends Component {
         return reverseOrdinal(currentSearch, alphabet);
       case 'ESR':
         return singleReduction(currentSearch, alphabet);
+      case 'EE':
+        return englishExtended(currentSearch, alphabet);
       default:
         return 'test';
     }

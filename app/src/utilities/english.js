@@ -75,3 +75,24 @@ export const singleReduction = (letter, LETTERS) => {
 
   return total;
 };
+
+export const englishExtended = (letter, LETTERS) => {
+  let total = 0;
+  let i = 0;
+  let currentLetter = letter.toLowerCase();
+  let findIndex;
+
+  while (i < currentLetter.length) {
+    const newLetters = LETTERS.slice(0);
+    if (newLetters.indexOf(currentLetter[i]) <= 8) {
+      findIndex = newLetters.indexOf(currentLetter[i]) + 1;
+    } else {
+      findIndex =
+        newLetters.splice(8, newLetters.length).indexOf(currentLetter[i]) * 10;
+    }
+    total += findIndex;
+    i++;
+  }
+
+  return total;
+};
